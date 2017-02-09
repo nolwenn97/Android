@@ -21,53 +21,48 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 
 public class MainActivity extends AppCompatActivity {
-
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
-    private int position;
+    private int position = 0;
+    private AlertDialog.Builder alertBox = null;
+    private final MainActivity self = this;
+    //
+    //
+    //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         ListView list_act;
         list_act = (ListView) findViewById(R.id.liste_acteur);
         final String[] acteurs = {"Eliza Taylor", "Thomas McDonell", "Marie Avgeropoulos", "Henry Ian Cusick", "Isaiah Washington", "Bob Morley"};
         final ArrayAdapter<String> adapter_act = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, acteurs);
         list_act.setAdapter(adapter_act);
-
-        final MainActivity self = this;
-        // Standard click listener
-        list_act.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Log.d("OKKKKKKKKKKKKKKKKKKKKK", acteurs[position]);
-            }
-        });
         // Long click listener
         list_act.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(final AdapterView<?> parent, final View view, int position, long id) {
-                AlertDialog.Builder alert;
-                alert = new AlertDialog.Builder(self);
+                alertBox = new AlertDialog.Builder(self);
                 final EditText edittext = new EditText(self);
                 edittext.setText(acteurs[position]);
                 self.position = position;
-                alert.setView(edittext);
-                alert.setPositiveButton("Valider", new DialogInterface.OnClickListener() {
+                alertBox.setView(edittext);
+                alertBox.setPositiveButton("Valider", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         acteurs[self.position] = edittext.getText().toString();
                         adapter_act.notifyDataSetChanged();
                     }
                 });
-                alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                alertBox.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                     }
                 });
-                alert.show();
+                alertBox.show();
                 return true;
             }
         });
@@ -83,12 +78,6 @@ public class MainActivity extends AppCompatActivity {
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-    }
-
-    protected void onStart(Bundle savedInstanceState) {
-
-        System.out.println();
-        System.out.print("bonjour on start");
     }
 
     /**
