@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Séries</string>
+    <string name="txt_nom">The 100</string>
+    <string name="txt_detail">Après une apocalypse nucléaire causée par l Homme lors
+        d une troisième Guerre Mondiale, les 318 survivants recensés se réfugient dans
+        des stations spatiales et parviennent à y vivre et à se reproduire, atteignant
+        le nombre de 4000. Mais 97 ans plus tard, le vaisseau mère, l Arche, est en piteux état.
+        Une centaine de jeunes délinquants emprisonnés au fil des années pour des crimes ou des
+        trahisons sont choisis comme cobayes par les autorités
+        pour redescendre sur Terre et tester les chances de survie. Dès leur arrivée, ils
+        découvrent un nouveau monde dangereux mais fascinant..</string>
+    <string name="acteurs">Acteurs</string>
+    <string name="details">Details</string>
+    <string name="saisons">Saisons</string>
+    <string name="episodes">Episodes</string>
+    <string name="nb_saison">4 Saisons</string>
+    <string name="nb_episodes">58 Episodes</string>
+    <string name="tps_serie">1 j 16 h 36 min</string>
+
+
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Series</string>
+    <string name="txt_nom">The 100</string>
+    <string name="txt_detail"> After a nuclear apocalypse caused by man during
+        Of a third World War, the 318 survivors
+        Space stations and manage to live and reproduce, reaching
+        The number of 4000. But 97 years later, the mother ship, the Ark, is in a pitiful state.
+        About one hundred juvenile delinquents imprisoned over the years for crimes or
+        Betrayals are chosen as guinea pigs by the authorities
+        To go down to Earth and test the chances of survival. As soon as they arrive, they
+        Discover a dangerous yet fascinating new world.</string>
+    <string name="acteurs">Actors</string>
+    <string name="details">Details</string>
+    <string name="saisons">Seasons</string>
+    <string name="episodes">Episodes</string>
+    <string name="nb_saison">4 Seasons</string>
+    <string name="nb_episodes">58 Episodes</string>
+    <string name="tps_serie">1 j 16 h 36 min</string>
+
+
+</resources>

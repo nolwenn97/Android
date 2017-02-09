@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    tools:context="ul.iutmetz.filoche1u.projet_android.MainActivity"
+    android:background="@color/back_page"
+    tools:ignore="ExtraText">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_titre"
+        android:background="@color/back_titre"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:text="@string/txt_nom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/txt_nom"
+            android:layout_weight="1"
+            android:textSize="26sp"
+            android:gravity="center"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="@color/titre" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="144dp"
+            app:srcCompat="@drawable/the_100"
+            android:id="@+id/imageView"
+            android:contentDescription=""
+            tools:ignore="ContentDescription" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_titre_details"
+            android:layout_below="@+id/layout_titre"
+            android:weightSum="1"
+            android:paddingLeft="30dp"
+            android:paddingRight="15dp">
+            <TextView
+                android:text="@string/nb_saison"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nb_saison"
+                android:textSize="12sp"
+                android:layout_weight="0.48" />
+            <TextView
+                android:text="@string/nb_episodes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nb_episodes"
+                android:textSize="12sp"
+                android:layout_weight="0.46" />
+            <TextView
+                android:text="@string/tps_serie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tps_serie"
+                android:textSize="12sp"
+                android:layout_weight="0.15" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/layout_scroll">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_details">
+                <TextView
+                    android:text="@string/acteurs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_titre_acteur"
+                    android:textColor="@color/texte"
+                    android:textSize="20sp"
+                    tools:ignore="RtlHardcoded"
+                    android:layout_marginTop="25dp" />
+                <TextView
+                    android:text="@string/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_titre_detail"
+                    android:textSize="20sp"
+                    android:textColor="@color/texte" />
+
+                <TextView
+                    android:text="@string/txt_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_detail"
+                    tools:ignore="RelativeOverlap"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/texte"
+                    android:textStyle="italic" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:id="@+id/layout_acteur"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp">
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="247dp"
+                    android:id="@+id/liste_acteur"
+                    android:textSize="20sp"
+                    tools:ignore="NestedScrolling,ObsoleteLayoutParam"
+                    android:layout_below="@+id/txt_titre_acteur"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_saison" >
+                <TextView
+                    android:text="@string/saisons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_titre_saison"
+                    android:textColor="@color/texte"
+                    android:textSize="20sp"
+                    tools:ignore="RtlHardcoded"
+                    android:layout_marginTop="25dp" />
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="196dp"
+                    android:id="@+id/Liste_saison"
+                    android:textSize="20sp"
+                    tools:ignore="NestedScrolling,ObsoleteLayoutParam"
+                    android:layout_below="@+id/txt_titre_saison"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_episode">
+            </LinearLayout>
+            <TextView
+                android:text="@string/episodes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_titre_episode"
+                android:textColor="@color/texte"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded"
+                android:layout_marginTop="25dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

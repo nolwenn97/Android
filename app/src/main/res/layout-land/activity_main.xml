@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    tools:context="ul.iutmetz.filoche1u.projet_android.MainActivity"
+    android:background="@color/back_page"
+    tools:ignore="ExtraText">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"><![CDATA[>
+        ]]>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_scrool">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_titre"
+                android:background="@color/back_titre"
+
+                >
+
+                <TextView
+                    android:text="@string/txt_nom"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/txt_nom"
+                    android:layout_weight="1"
+                    android:textSize="26sp"
+                    android:gravity="center"
+                    android:typeface="serif"
+                    android:textStyle="bold"
+                    android:textColor="@color/titre"
+
+                    />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="193dp"
+                        android:layout_height="200dp"
+                        app:srcCompat="@drawable/the_100_land"
+                        android:id="@+id/imageView"
+                        tools:ignore="ContentDescription"
+                    />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layout_titre_details"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="15dp"
+                        android:layout_weight="1"
+                        tools:ignore="InefficientWeight,RtlHardcoded">
+
+                        <TextView
+                            android:text="@string/nb_saison"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/nb_saison"
+                            android:textSize="20sp"
+                            android:paddingTop="10dp"
+
+                            android:layout_weight="0.48"
+                            tools:ignore="NestedWeights" />
+
+                        <TextView
+                            android:text="@string/nb_episodes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/nb_episodes"
+                            android:textSize="20sp"
+                            android:paddingTop="10dp"
+                            />
+
+                        <TextView
+                            android:text="@string/tps_serie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tps_serie"
+                            android:textSize="20sp"
+                            android:paddingTop="10dp" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="61dp"
+                            android:paddingTop="15dp"
+                            android:id="@+id/layout_rating">
+
+                            <RatingBar
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/ratingBar" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/layout_contenu">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layout_details">
+
+                        <TextView
+                            android:text="@string/details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_titre_detail"
+                            android:textSize="20sp"
+                            android:textColor="@color/texte"
+
+                            />
+
+                        <TextView
+                            android:text="@string/txt_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_detail"
+
+                            tools:ignore="RelativeOverlap"
+                            android:layout_marginTop="16dp"
+                            android:textColor="@color/texte"
+                            android:textStyle="italic"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/layout_acteur"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp">
+
+                        <TextView
+                            android:text="@string/acteurs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_titre_acteur"
+                            android:textColor="@color/texte"
+                            android:textSize="20sp"
+                            tools:ignore="RtlHardcoded"
+                            android:layout_marginTop="25dp" />
+
+                        <ListView
+                            android:layout_width="match_parent"
+                            android:layout_height="196dp"
+                            android:id="@+id/liste_acteur"
+                            android:textSize="20sp"
+                            tools:ignore="NestedScrolling,ObsoleteLayoutParam"
+                            android:layout_below="@+id/txt_titre_acteur"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/layout_saison">
+
+                        <TextView
+                            android:text="@string/saisons"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_titre_saison"
+                            android:textColor="@color/texte"
+                            android:textSize="20sp"
+                            tools:ignore="RtlHardcoded"
+                            android:layout_marginTop="25dp" />
+
+                        <ListView
+                            android:layout_width="match_parent"
+                            android:layout_height="196dp"
+                            android:id="@+id/Liste_saison"
+                            android:textSize="20sp"
+                            tools:ignore="NestedScrolling,ObsoleteLayoutParam"
+                            android:layout_below="@+id/txt_titre_saison"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/layout_episode"></LinearLayout>
+
+                    <TextView
+                        android:text="@string/episodes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_titre_episode"
+                        android:textColor="@color/texte"
+                        android:textSize="20sp"
+                        tools:ignore="RtlHardcoded"
+                        android:layout_marginTop="25dp" />
+
+
+                </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
